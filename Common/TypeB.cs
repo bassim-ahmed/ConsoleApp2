@@ -13,8 +13,8 @@ namespace Common
             //valid within its project
             //typeA.x = 10;//invalid
             // x is privite
-            a.y = 28;//valid
-            a.z = 23;//valid bc its public
+            //a.y = 28;//valid
+            //a.z = 23;//valid bc its public
         }
     }
 }
