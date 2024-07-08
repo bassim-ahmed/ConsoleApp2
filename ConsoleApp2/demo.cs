@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Common;
 namespace ConsoleApp2
 {
     internal class demo
@@ -65,6 +65,15 @@ namespace ConsoleApp2
                 Console.WriteLine(ex.Message);
             }
             #endregion
+            #region access modifier
+            typeA a =new typeA();//valid
+            //TypeB b = new Common.TypeB(); //invalid[internal]
+            //a.x = 19; // inbalid bc of protectoion level
+            a.y = 3; // invalid bc y is internal
+            a.z = 4;//valid bc its public
+
+            #endregion
+
 
         }
     }
