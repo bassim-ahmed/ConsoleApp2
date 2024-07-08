@@ -25,7 +25,7 @@ namespace ConsoleApp2
     }
     public enum Gender
     {
-        male,female
+        male=1,female=2
     }
    public enum branches:byte //8 bite 0:255
     {
@@ -117,15 +117,24 @@ namespace ConsoleApp2
             //Console.WriteLine(z);
             #endregion
             #region ex 2
-            Console.WriteLine("plz enter your grade");
-            bool result=Enum.TryParse(typeof(Grades),Console.ReadLine(), out object x);
-            Console.WriteLine($" your grade is {result}");
-            Console.WriteLine($"your grade is {x}");
+            //Console.WriteLine("plz enter your grade");
+            //bool result=Enum.TryParse(typeof(Grades),Console.ReadLine(), out object x);
+            //Console.WriteLine($" your grade is {result}");
+            //Console.WriteLine($"your grade is {x}");
             #endregion
-
+            #region ex3
+            //string gender = "MAle";
+            //Gender x = (Gender)gender;
+            //Enum.TryParse(typeof(Gender), gender, out object x);
+            ////bool flag=Enum.TryParse<Gender>(gender, true, out Gender x);
+            //Console.WriteLine(flag);
+            //Console.WriteLine(x);
+            //لاتجعل enum start with zero 
+            #endregion
+            #endregion
         }
 
-        #endregion
+
 
     }
      public enum Role
