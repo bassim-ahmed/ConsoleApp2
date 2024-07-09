@@ -31,6 +31,20 @@ namespace ConsoleApp2
     {
         dokki,maddi,smartvallege,
     }
+    [Flags]
+    public enum permission
+    {
+        Delete=1,Excute=2,Read=4,Write=8
+    }
+  
+    public class Employee
+    {
+       public string name;
+        public int age;
+        public Gender gender;
+        public  decimal salary;
+         public permission permission;
+    }
     internal class demo
     {
         //static void dosomecode()
@@ -131,6 +145,45 @@ namespace ConsoleApp2
             //Console.WriteLine(x);
             //لاتجعل enum start with zero 
             #endregion
+            #region ex 4
+            Employee emp = new Employee();
+            emp.name = "bassim";
+            emp.gender = Gender.male;
+            emp.permission = (permission)3;
+            Console.WriteLine(emp.permission);
+
+            //if you want to add permission
+            //do xor operation
+            emp.permission = emp.permission ^ permission.Read;
+            Console.WriteLine(emp.permission);
+
+
+            //if you want to remove [deny]
+            //do xor operation
+            emp.permission = emp.permission ^ permission.Read;
+            Console.WriteLine(emp.permission);
+
+            //if you want to check if delete is existed or not 
+            //do and operation
+            //&
+            //emp.permission & permission.Delete
+            //if the delete existed ==>return delete 
+            //if delete is not exited==>retun false
+            //if((emp.permission & permission.Read) == permission.Read)
+            //{
+            //    Console.WriteLine("read is existed");
+            //}
+            //else
+            //{
+            //    emp.permission = emp.permission ^ permission.Read;
+            //    }
+            //emp.permission= emp.permission | permission.Read;
+            //Console.WriteLine(emp.permission);
+
+        }
+
+            #endregion
+
             #endregion
         }
 
@@ -141,14 +194,14 @@ namespace ConsoleApp2
     {
         admin=10,editor=20,viewer=30
     }
-        class employee
-        {
-            string name;//varchar
-            int age;//int
-          Gender gender;//0-1
-    Role role;
+    //    class employee
+    //    {
+    //        string name;//varchar
+    //        int age;//int
+    //      Gender gender;//0-1
+    //Role role;
          
-        }
+    //    }
     }
     
 
