@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Security.Cryptography;
 using System.Security.Principal;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
+
+
 //using Common;
 namespace ConsoleApp2
 {
@@ -146,22 +151,22 @@ namespace ConsoleApp2
             //لاتجعل enum start with zero 
             #endregion
             #region ex 4
-            Employee emp = new Employee();
-            emp.name = "bassim";
-            emp.gender = Gender.male;
-            emp.permission = (permission)3;
-            Console.WriteLine(emp.permission);
+            //Employee emp = new Employee();
+            //emp.name = "bassim";
+            //emp.gender = Gender.male;
+            //emp.permission = (permission)3;
+            //Console.WriteLine(emp.permission);
 
-            //if you want to add permission
-            //do xor operation
-            emp.permission = emp.permission ^ permission.Read;
-            Console.WriteLine(emp.permission);
+            ////if you want to add permission
+            ////do xor operation
+            //emp.permission = emp.permission ^ permission.Read;
+            //Console.WriteLine(emp.permission);
 
 
-            //if you want to remove [deny]
-            //do xor operation
-            emp.permission = emp.permission ^ permission.Read;
-            Console.WriteLine(emp.permission);
+            ////if you want to remove [deny]
+            ////do xor operation
+            //emp.permission = emp.permission ^ permission.Read;
+            //Console.WriteLine(emp.permission);*/
 
             //if you want to check if delete is existed or not 
             //do and operation
@@ -182,18 +187,33 @@ namespace ConsoleApp2
 
         }
 
-            #endregion
+        #endregion
 
-            #endregion
-        }
+        #endregion
+
+        #region struct
+        //Point p2;
+        //declare varible from type point
+        //clr will allocate 8 byte stack
+        //p2.y== 1;
+        //      console.WriteLine(p2.y);
+        //P1= new point(50);
+        //new =>is just only for constructor selection
+        //that will initialize attribute of struct
+
+        //Console.WriteLine($"X = {p1.X}");
+    
+        //Console.WriteLine($"Y={p1.X}");
 
 
 
-    }
-     public enum Role
-    {
-        admin=10,editor=20,viewer=30
-    }
+
+    #endregion
+}
+       // public enum Role
+    //{
+    //    admin=10,editor=20,viewer=30
+    //}
     //    class employee
     //    {
     //        string name;//varchar
@@ -202,6 +222,11 @@ namespace ConsoleApp2
     //Role role;
          
     //    }
-    }
+     
+}
+
+
+
+    
     
 
